@@ -361,7 +361,7 @@ macro_rules! delimited(
 #[macro_export]
 macro_rules! do_parse (
   (__impl $i:expr, $consumed:expr, ( $($rest:expr),* )) => (
-    $crate::IResult::Done($i, ( $($rest),* ))
+    $crate::IResult::Done($i, $($rest),*)
   );
 
   (__impl $i:expr, $consumed:expr, $field:ident : $submac:ident!( $($args:tt)* ) ) => (

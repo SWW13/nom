@@ -676,7 +676,7 @@ macro_rules! eat_separator (
             $crate::IResult::Done(($i).slice(index..), ($i).slice(..index))
           },
           ::std::option::Option::None        => {
-            $crate::IResult::Done(($i).slice(($i).input_len()..), ($i))
+            $crate::IResult::Done(($i).slice(($i).input_len()..), $i)
           }
         }
       }

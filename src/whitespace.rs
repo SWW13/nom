@@ -732,7 +732,7 @@ macro_rules! eat_separator (
             Ok((($i).slice(index..), ($i).slice(..index)))
           },
           ::std::option::Option::None        => {
-            Ok((($i).slice(($i).input_len()..), ($i)))
+            Ok((($i).slice(($i).input_len()..), $i))
           }
         }
       }

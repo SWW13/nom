@@ -304,7 +304,7 @@ macro_rules! delimited(
 #[macro_export]
 macro_rules! do_parse (
   (__impl $i:expr, ( $($rest:expr),* )) => (
-    ::std::result::Result::Ok(($i, ( $($rest),* )))
+    ::std::result::Result::Ok(($i, $($rest),*))
   );
 
   (__impl $i:expr, $field:ident : $submac:ident!( $($args:tt)* ) ) => (
